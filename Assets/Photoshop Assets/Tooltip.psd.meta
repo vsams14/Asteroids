@@ -1,0 +1,632 @@
+fileFormatVersion: 2
+guid: 85355c645808df04c94a0cfd0c7a62ad
+timeCreated: 1457146030
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Tooltip_0
+    21300002: Tooltip_1
+    21300004: Tooltip_2
+    21300006: Tooltip_3
+    21300008: Tooltip_4
+    21300010: Tooltip_5
+    21300012: Tooltip_6
+    21300014: Tooltip_7
+    21300016: Tooltip_8
+    21300018: Tooltip_9
+    21300020: Tooltip_10
+    21300022: Tooltip_11
+    21300024: Tooltip_12
+    21300026: Tooltip_13
+    21300028: Tooltip_14
+    21300030: Tooltip_15
+    21300032: Tooltip_16
+    21300034: Tooltip_17
+    21300036: Tooltip_18
+    21300038: Tooltip_19
+    21300040: Tooltip_20
+    21300042: Tooltip_21
+    21300044: Tooltip_22
+    21300046: Tooltip_23
+    21300048: Tooltip_24
+    21300050: Tooltip_25
+    21300052: Tooltip_26
+    21300054: Tooltip_27
+    21300056: Tooltip_28
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Tooltip_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -91, y: -42}
+        - {x: -93, y: -51}
+        - {x: -93, y: -74}
+        - {x: -84, y: -82}
+        - {x: -60, y: -82}
+        - {x: -57, y: -71}
+        - {x: -57, y: -46}
+        - {x: -59, y: -42}
+    - name: Tooltip_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92, y: -30}
+        - {x: -93, y: -32}
+        - {x: -93, y: -75}
+        - {x: -92, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: -30}
+    - name: Tooltip_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92, y: -18}
+        - {x: -93, y: -29}
+        - {x: -93, y: -77}
+        - {x: -91, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: -21}
+        - {x: -59, y: -18}
+    - name: Tooltip_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -83, y: -6}
+        - {x: -88, y: -7}
+        - {x: -93, y: -16}
+        - {x: -93, y: -71}
+        - {x: -87, y: -82}
+        - {x: -64, y: -82}
+        - {x: -57, y: -78}
+        - {x: -57, y: -15}
+        - {x: -66, y: -6}
+    - name: Tooltip_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67, y: 6}
+        - {x: -84, y: 6}
+        - {x: -93, y: -3}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: 2}
+        - {x: -62, y: 5}
+    - name: Tooltip_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92, y: 24}
+        - {x: -93, y: 13}
+        - {x: -93, y: -78}
+        - {x: -92, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: 21}
+        - {x: -59, y: 24}
+    - name: Tooltip_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: -79}
+        - {x: -90, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: 36}
+        - {x: -92, y: 36}
+        - {x: -93, y: 27}
+    - name: Tooltip_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -84, y: 48}
+        - {x: -93, y: 39}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -68, y: -82}
+        - {x: -62, y: -81}
+        - {x: -57, y: -76}
+        - {x: -57, y: 40}
+        - {x: -58, y: 48}
+    - name: Tooltip_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -91, y: 60}
+        - {x: -93, y: 55}
+        - {x: -93, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: 60}
+    - name: Tooltip_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -76}
+        - {x: -85, y: -82}
+        - {x: -57, y: -82}
+        - {x: -57, y: 72}
+    - name: Tooltip_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 72}
+        - {x: -93, y: 72}
+        - {x: -93, y: -76}
+        - {x: -85, y: -82}
+        - {x: -67, y: -82}
+        - {x: -62, y: -81}
+        - {x: -57, y: -72}
+        - {x: -40, y: -10}
+        - {x: -40, y: 40}
+    - name: Tooltip_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 576
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -79}
+        - {x: -87, y: -82}
+        - {x: -42, y: -82}
+        - {x: -28, y: -14}
+        - {x: -28, y: 57}
+        - {x: -62, y: 72}
+    - name: Tooltip_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -82}
+        - {x: -41, y: -82}
+        - {x: -16, y: -5}
+        - {x: -16, y: 59}
+        - {x: -42, y: 72}
+    - name: Tooltip_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 47}
+        - {x: -63, y: 72}
+        - {x: -93, y: 72}
+        - {x: -93, y: -79}
+        - {x: -87, y: -82}
+        - {x: -67, y: -82}
+        - {x: -62, y: -81}
+        - {x: -57, y: -72}
+        - {x: -4, y: 7}
+        - {x: -4, y: 37}
+    - name: Tooltip_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -79}
+        - {x: -87, y: -82}
+        - {x: -58, y: -82}
+        - {x: 8, y: -6}
+        - {x: 8, y: 46}
+        - {x: -53, y: 72}
+    - name: Tooltip_15
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -87, y: 72}
+        - {x: -93, y: 68}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -59, y: -82}
+        - {x: 20, y: -11}
+        - {x: 20, y: 46}
+        - {x: -44, y: 72}
+    - name: Tooltip_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 72}
+        - {x: -93, y: 72}
+        - {x: -93, y: -82}
+        - {x: -54, y: -82}
+        - {x: 32, y: -3}
+        - {x: 32, y: 37}
+        - {x: 22, y: 47}
+    - name: Tooltip_17
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -75}
+        - {x: -85, y: -82}
+        - {x: -53, y: -82}
+        - {x: 44, y: -9}
+        - {x: 44, y: 46}
+        - {x: -55, y: 72}
+    - name: Tooltip_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -82}
+        - {x: -3, y: -82}
+        - {x: 56, y: -46}
+        - {x: 56, y: 47}
+        - {x: -55, y: 72}
+    - name: Tooltip_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: 50}
+        - {x: -53, y: 72}
+        - {x: -93, y: 72}
+        - {x: -93, y: -75}
+        - {x: -85, y: -82}
+        - {x: -51, y: -82}
+        - {x: 68, y: 18}
+        - {x: 68, y: 37}
+        - {x: 67, y: 41}
+    - name: Tooltip_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -79}
+        - {x: -87, y: -82}
+        - {x: -52, y: -82}
+        - {x: 80, y: -2}
+        - {x: 80, y: 46}
+        - {x: -42, y: 72}
+    - name: Tooltip_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -81}
+        - {x: -92, y: -82}
+        - {x: -62, y: -82}
+        - {x: -45, y: -74}
+        - {x: 92, y: 11}
+        - {x: 92, y: 56}
+        - {x: 43, y: 72}
+    - name: Tooltip_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69, y: 57}
+        - {x: 65, y: 58}
+        - {x: -14, y: 72}
+        - {x: -84, y: 72}
+        - {x: -93, y: 67}
+        - {x: -93, y: -82}
+        - {x: -32, y: -82}
+        - {x: 90, y: 4}
+        - {x: 93, y: 16}
+        - {x: 93, y: 42}
+        - {x: 87, y: 48}
+    - name: Tooltip_23
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: 72}
+        - {x: -91, y: 72}
+        - {x: -93, y: 62}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -67, y: -82}
+        - {x: -62, y: -81}
+        - {x: -57, y: -72}
+        - {x: 93, y: -13}
+        - {x: 93, y: 68}
+    - name: Tooltip_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93, y: 72}
+        - {x: -93, y: -73}
+        - {x: -86, y: -82}
+        - {x: -65, y: -82}
+        - {x: -49, y: -76}
+        - {x: 93, y: -6}
+        - {x: 93, y: 72}
+    - name: Tooltip_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93, y: 60}
+        - {x: 91, y: 71}
+        - {x: 82, y: 76}
+        - {x: -70, y: 76}
+        - {x: -91, y: 75}
+        - {x: -93, y: 62}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -67, y: -82}
+        - {x: -62, y: -81}
+        - {x: -57, y: -72}
+        - {x: 70, y: -23}
+        - {x: 93, y: -11}
+    - name: Tooltip_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -90, y: 82}
+        - {x: -93, y: 73}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -61, y: -82}
+        - {x: 93, y: -23}
+        - {x: 93, y: 80}
+        - {x: 80, y: 82}
+    - name: Tooltip_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93, y: 88}
+        - {x: -87, y: 88}
+        - {x: -93, y: 73}
+        - {x: -93, y: -73}
+        - {x: -84, y: -82}
+        - {x: -58, y: -82}
+        - {x: -52, y: -33}
+        - {x: 82, y: -57}
+        - {x: 93, y: -27}
+    - name: Tooltip_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 88, y: 88}
+        - {x: -87, y: 88}
+        - {x: -93, y: 82}
+        - {x: -93, y: -82}
+        - {x: -49, y: -82}
+        - {x: 80, y: -29}
+        - {x: 93, y: -24}
+        - {x: 93, y: 82}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

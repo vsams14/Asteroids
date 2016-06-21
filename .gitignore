@@ -28,3 +28,13 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Unity3D players
+player_win_x64.pdb
+player_win_x64_s.pdb
+
+#Project specific save files
+prefs.bin
+save_*.bin
+*log.*
+output_log.txt
