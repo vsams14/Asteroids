@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: f265b6bbe2f1b7845ae0b1bc6d33730b
-timeCreated: 1457237894
+timeCreated: 1472269329
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - planetText: {instanceID: 0}
+  - textField: {instanceID: 0}
+  - radial: {fileID: 21300000, guid: e5641de21931022429237648afb97abc, type: 3}
+  - radial_selected: {fileID: 21300002, guid: e5641de21931022429237648afb97abc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

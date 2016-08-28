@@ -5,16 +5,21 @@ using System.Collections;
 public class CanvasScript : MonoBehaviour
 {
     public static CanvasScript instance = null;
-    public Text planetText;
-    public GameObject[] Keyboard;
+    public Text planetText; //The text which shows planet name/progress
+    public Text textField; //NAME: *******
+    public GameObject Keyboard; //keyboard object reference
+    public GameObject Menu; //menu object reference
+    public Sprite radial, radial_selected, keys, keys_selected, audios, audios_selected, video, video_selected;
+    public Button[] radialB; //difficulty select buttons
+    public Button[] tabs; //setting tabs
     public bool keyboard_up = false;
-    public Button[] radialB;
-    public Text textField;
+    public bool menu_up = false;   
+    public int callingPlanet;
+
+    private int activeTab = 0;
+    private int diff = 1;
     private string pName = "";
     private string valid = "1234567890QWERTYUIOPASDFGHJKL#ZXCVBNM-_.qwertyuiopasdfghjklzxcvbnm";
-    public Sprite radial, radial_selected;
-    private int diff = 1;
-    public int callingPlanet;
 
     void Awake()
     {
@@ -30,25 +35,21 @@ public class CanvasScript : MonoBehaviour
         }
         planetText.GetComponent<Text>().enabled = false;
         hideKeyboard();
+        hideMenu();
     }
+
+    //New Planet
 
     public void hideKeyboard()
     {
-        foreach (GameObject g in Keyboard)
-        {
-            g.gameObject.SetActive(false);
-        }
+        Keyboard.gameObject.SetActive(false);
         keyboard_up = false;
     }
 
-    public IEnumerator showKeyboard(int i)
+    public void showKeyboard(int i)
     {
         keyboard_up = true;
-        yield return new WaitForSeconds(.05f);
-        foreach (GameObject g in Keyboard)
-        {
-            g.gameObject.SetActive(true);
-        }
+        Keyboard.gameObject.SetActive(true);
         pName = "";
         callingPlanet = i;
         diff = 1;
@@ -69,37 +70,45 @@ public class CanvasScript : MonoBehaviour
             {
                 pName += c;
             }
-        }        
+        }
     }
 
     void Update()
     {
-        foreach (char c in Input.inputString)
+        if (keyboard_up)
         {
-            if (c == "\b"[0])
+            foreach (char c in Input.inputString)
             {
-                if (pName.Length > 0)
+                if (c == "\b"[0])
                 {
-                    pName = pName.Substring(0, pName.Length - 1);
+                    if (pName.Length > 0)
+                    {
+                        pName = pName.Substring(0, pName.Length - 1);
+                    }
+                }
+                else if (c == "\n"[0] || c == "\r"[0])
+                {
+                }
+                else
+                {
+                    if (pName.Length < 7 && valid.Contains(c.ToString()))
+                    {
+                        pName += c;
+                    }
                 }
             }
-            else if (c == "\n"[0] || c == "\r"[0])
-            {
-            }
-            else
-            {
-                if (pName.Length < 7 && valid.Contains(c.ToString()))
-                {
-                    pName += c;
-                }
-            }
+            textField.text = "NAME:" + pName.ToUpper();
         }
-        textField.text = "NAME:" + pName.ToUpper();
+
+        if (menu_up && activeTab == 0)
+        {
+
+        }
     }
 
     public void setDifficulty(int i)
     {
-        switch(i)
+        switch (i)
         {
             case 0:
                 radialB[0].GetComponent<Image>().sprite = radial_selected;
@@ -122,7 +131,7 @@ public class CanvasScript : MonoBehaviour
 
     public void createSave()
     {
-        if(pName != "")
+        if (pName != "")
         {
             hideKeyboard();
             GameManager.instance.save[callingPlanet].difficulty = diff;
@@ -131,5 +140,42 @@ public class CanvasScript : MonoBehaviour
             GameManager.instance.copySaveToMenuPrefs(callingPlanet);
             GameManager.instance.StartGame(callingPlanet);
         }
+    }
+
+    //Settings
+
+    public void hideMenu()
+    {
+        Menu.gameObject.SetActive(false);
+        menu_up = false;
+    }
+
+    public void showMenu()
+    {
+        menu_up = true;
+        Menu.gameObject.SetActive(true);
+    }
+
+    public void switchMenuTab(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                tabs[0].GetComponent<Image>().sprite = keys_selected;
+                tabs[1].GetComponent<Image>().sprite = audios;
+                tabs[2].GetComponent<Image>().sprite = video;
+                break;
+            case 1:
+                tabs[0].GetComponent<Image>().sprite = keys;
+                tabs[1].GetComponent<Image>().sprite = audios_selected;
+                tabs[2].GetComponent<Image>().sprite = video;
+                break;
+            case 2:
+                tabs[0].GetComponent<Image>().sprite = keys;
+                tabs[1].GetComponent<Image>().sprite = audios;
+                tabs[2].GetComponent<Image>().sprite = video_selected;
+                break;
+        }
+        activeTab = i;
     }
 }

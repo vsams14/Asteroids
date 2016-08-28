@@ -78,7 +78,7 @@ public class PlanetMenu : MonoBehaviour
             }
             else
             {
-                StartCoroutine(CanvasScript.instance.showKeyboard(planetNumber));
+                CanvasScript.instance.showKeyboard(planetNumber);
             }
         }        
     }

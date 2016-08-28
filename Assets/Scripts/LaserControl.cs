@@ -48,21 +48,29 @@ public class LaserControl : MonoBehaviour
             instance.level = 2;
             UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
         }
-        //if other is the play asteroid, start the game
+        //if other is the back asteroid, go back a scene
         if (other.name == "Back")
         {
             instance.level = instance.prev[instance.prev.Count - 1];
             instance.prev.RemoveAt(instance.prev.Count - 1);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
         }
-        //if other is the menu asteroid, reload, get menu options
+        //if other is the color asteroid, reload, get color options
         if (other.name == "Color")
         {
             instance.prev.Add(instance.level);
             instance.level = 1;
             UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
         }
-        //if in colour select menu
+        //if other is the menu asteroid, show menu
+        if (other.name == "Menu")
+        {
+            if (!CanvasScript.instance.menu_up)
+            {
+                CanvasScript.instance.showMenu();
+            }
+        }
+        //if in color select menu
         if ((other.name.Length == 1) && (other.tag == "Color"))
         {
             int color = int.Parse(other.name);

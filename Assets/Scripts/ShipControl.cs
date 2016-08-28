@@ -22,7 +22,7 @@ public class ShipControl : MonoBehaviour
 
     void Update()
     {
-        if (!CanvasScript.instance.keyboard_up)
+        if (!CanvasScript.instance.keyboard_up && !CanvasScript.instance.menu_up)
         {
             float f = Input.GetAxisRaw("Vertical") / 10;
             float rotrad = rb2D.rotation * Mathf.PI / 180 + pi / 2;
