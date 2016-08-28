@@ -41,13 +41,13 @@ public class PlanetMenu : MonoBehaviour
     {
         if (!CanvasScript.instance.keyboard_up)
         {
-            if ((Time.time - tick) > 0.75f && tick != 0)
+            if (tick != 0)
             {
                 GameObject tool = GameManager.instance.boardScript.toolTip;
                 tooltip = Instantiate(tool, tooltipPos, Quaternion.identity) as GameObject;
                 tick = 0;
             }
-            if ((Time.time - tock) > 2.5f && tock != 0)
+            if ((Time.time - tock) > 1.75f && tock != 0)
             {
                 planetText.GetComponent<RectTransform>().localPosition = (tooltipPos) * 100;
                 if (GameManager.instance.data.save[planetNumber])

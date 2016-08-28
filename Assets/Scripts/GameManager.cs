@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
@@ -30,15 +29,6 @@ public class GameManager : MonoBehaviour
         boardScript = GetComponent<BoardManager>();
         boardScript.SetupScene(instance.level);
         loadData();
-    }
-
-    //Run every time a scene is loaded
-    void OnLevelWasLoaded(int index)
-    {
-        //Add one to our level number.
-        //level++;
-        //Call InitGame to initialize our level.
-        //InitGame();
     }
 
     void OnApplicationQuit()
