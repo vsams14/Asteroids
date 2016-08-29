@@ -9,7 +9,9 @@ public class CanvasScript : MonoBehaviour
     public Text textField; //NAME: *******
     public GameObject Keyboard; //keyboard object reference
     public GameObject Menu; //menu object reference
-    public Sprite radial, radial_selected, keys, keys_selected, audios, audios_selected, video, video_selected;
+    public GameObject keys_obj, audio_obj, video_obj;
+    public Scrollbar menuScroll;
+    public Sprite radial_sprite, radial_selected_sprite, keys_sprite, keys_selected_sprite, audio_sprite, audio_selected_sprite, video_sprite, video_selected_sprite;
     public Button[] radialB; //difficulty select buttons
     public Button[] tabs; //setting tabs
     public bool keyboard_up = false;
@@ -111,19 +113,19 @@ public class CanvasScript : MonoBehaviour
         switch (i)
         {
             case 0:
-                radialB[0].GetComponent<Image>().sprite = radial_selected;
-                radialB[1].GetComponent<Image>().sprite = radial;
-                radialB[2].GetComponent<Image>().sprite = radial;
+                radialB[0].GetComponent<Image>().sprite = radial_selected_sprite;
+                radialB[1].GetComponent<Image>().sprite = radial_sprite;
+                radialB[2].GetComponent<Image>().sprite = radial_sprite;
                 break;
             case 1:
-                radialB[1].GetComponent<Image>().sprite = radial_selected;
-                radialB[0].GetComponent<Image>().sprite = radial;
-                radialB[2].GetComponent<Image>().sprite = radial;
+                radialB[1].GetComponent<Image>().sprite = radial_selected_sprite;
+                radialB[0].GetComponent<Image>().sprite = radial_sprite;
+                radialB[2].GetComponent<Image>().sprite = radial_sprite;
                 break;
             case 2:
-                radialB[2].GetComponent<Image>().sprite = radial_selected;
-                radialB[1].GetComponent<Image>().sprite = radial;
-                radialB[0].GetComponent<Image>().sprite = radial;
+                radialB[2].GetComponent<Image>().sprite = radial_selected_sprite;
+                radialB[1].GetComponent<Image>().sprite = radial_sprite;
+                radialB[0].GetComponent<Image>().sprite = radial_sprite;
                 break;
         }
         diff = i;
@@ -161,19 +163,29 @@ public class CanvasScript : MonoBehaviour
         switch (i)
         {
             case 0:
-                tabs[0].GetComponent<Image>().sprite = keys_selected;
-                tabs[1].GetComponent<Image>().sprite = audios;
-                tabs[2].GetComponent<Image>().sprite = video;
+                tabs[0].GetComponent<Image>().sprite = keys_selected_sprite;
+                tabs[1].GetComponent<Image>().sprite = audio_sprite;
+                tabs[2].GetComponent<Image>().sprite = video_sprite;
+                keys_obj.gameObject.SetActive(true);
+                audio_obj.gameObject.SetActive(false);
+                video_obj.gameObject.SetActive(false);
+                menuScroll.value = 0;
                 break;
             case 1:
-                tabs[0].GetComponent<Image>().sprite = keys;
-                tabs[1].GetComponent<Image>().sprite = audios_selected;
-                tabs[2].GetComponent<Image>().sprite = video;
+                tabs[0].GetComponent<Image>().sprite = keys_sprite;
+                tabs[1].GetComponent<Image>().sprite = audio_selected_sprite;
+                tabs[2].GetComponent<Image>().sprite = video_sprite;
+                keys_obj.gameObject.SetActive(false);
+                audio_obj.gameObject.SetActive(true);
+                video_obj.gameObject.SetActive(false);
                 break;
             case 2:
-                tabs[0].GetComponent<Image>().sprite = keys;
-                tabs[1].GetComponent<Image>().sprite = audios;
-                tabs[2].GetComponent<Image>().sprite = video_selected;
+                tabs[0].GetComponent<Image>().sprite = keys_sprite;
+                tabs[1].GetComponent<Image>().sprite = audio_sprite;
+                tabs[2].GetComponent<Image>().sprite = video_selected_sprite;
+                keys_obj.gameObject.SetActive(false);
+                audio_obj.gameObject.SetActive(false);
+                video_obj.gameObject.SetActive(true);
                 break;
         }
         activeTab = i;

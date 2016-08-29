@@ -44,9 +44,14 @@ public class ShipControl : MonoBehaviour
                 Instantiate(Laser[GameManager.instance.data.color], pos1, transform.rotation);
                 Instantiate(Laser[GameManager.instance.data.color], pos2, transform.rotation);
             }
+            //rotate towards mouse
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
         }
-        //rotate towards mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
+        
+        if (Input.GetKeyDown("q") && Input.GetKeyDown("z"))
+        {
+            GameManager.instance.devReload();
+        }
     }
 }

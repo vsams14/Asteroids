@@ -113,4 +113,14 @@ public class GameManager : MonoBehaviour
         saveBeingPlayed = save;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
     }
+
+    public void devReload()
+    {
+        saveData();
+        level = 0;
+        prev.Clear();
+        CanvasScript.instance.hideKeyboard();
+        CanvasScript.instance.hideMenu();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+    }
 }
