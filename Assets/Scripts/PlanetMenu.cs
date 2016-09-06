@@ -24,7 +24,7 @@ public class PlanetMenu : MonoBehaviour
         bounds[3] = pos + new Vector3(-planetRadius - .11f, -planetRadius + .05f, 0f);
         tooltipPos = pos + new Vector3(0f, planetRadius + 1f, 0f);
         planetNumber = int.Parse(gameObject.name);
-        planetText = CanvasScript.instance.planetText.GetComponent<Text>();
+        planetText = CanvasScript.instance.planetTextObject.GetComponent<Text>();
     }
 
     void OnMouseEnter()
