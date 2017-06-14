@@ -151,7 +151,7 @@ Prefab:
         type: 2}
       propertyPath: selectCanvas
       value: 
-      objectReference: {fileID: 1968074433336120, guid: 195ba5b8b915905409a331e72d7323e4,
+      objectReference: {fileID: 1493628417568080, guid: 8603bc7d398d70c4ea4b21709f0d17b2,
         type: 2}
     - target: {fileID: 114194408257330472, guid: 567bba88ca2be9143abdda46dcf3b864,
         type: 2}
