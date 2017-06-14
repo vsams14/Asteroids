@@ -41,7 +41,7 @@ public class BoardManager : MonoBehaviour
 
     void PlacePlanet()
     {
-        Planet instance = Instantiate(planet, new Vector3(0f, 0f, 0f), Quaternion.identity) as Planet;
+        Planet instance = Instantiate(planet, new Vector3(1.28f, 0f, 0f), Quaternion.identity) as Planet;
         instance.transform.SetParent(boardHolder);
         instance.Generate();
         planetInstance = instance;
@@ -50,7 +50,7 @@ public class BoardManager : MonoBehaviour
 
     internal void updateSidebar()
     {
-        UI.transform.Find("PLANETNAME").GetComponent<Text>().text = planetInstance.getName();
+        UI.transform.Find("Sidebar").Find("PLANETNAME").GetComponent<Text>().text = planetInstance.getName();
     }
 
     void PlaceCanvas()
