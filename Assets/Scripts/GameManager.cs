@@ -41,6 +41,27 @@ public class GameManager : MonoBehaviour
         instance.boardScript.updateSidebar();
     }
 
+    public void clickControls()
+    {
+        instance.boardScript.ShowControls();
+        instance.boardScript.HideAudio();
+        instance.boardScript.HideVideo();
+    }
+
+    public void clickAudio()
+    {
+        instance.boardScript.HideControls();
+        instance.boardScript.ShowAudio();
+        instance.boardScript.HideVideo();
+    }
+
+    public void clickVideo()
+    {
+        instance.boardScript.HideControls();
+        instance.boardScript.HideAudio();
+        instance.boardScript.ShowVideo();
+    }
+
     void OnApplicationQuit()
     {
     }
