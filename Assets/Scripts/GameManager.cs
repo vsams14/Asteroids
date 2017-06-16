@@ -62,6 +62,12 @@ public class GameManager : MonoBehaviour
         instance.boardScript.ShowVideo();
     }
 
+
+    public void quit()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
     void OnApplicationQuit()
     {
     }
