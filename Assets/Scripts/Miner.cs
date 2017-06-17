@@ -21,13 +21,10 @@ public class Miner : MonoBehaviour {
         } else {
             transform.Find("reticule").gameObject.SetActive(false);
         }
-
     }
 
     public void SetAst(Asteroid ast) {
-        if (isSelected) {
-            selectedAst = ast;
-        }  
+        selectedAst = ast;
     }
 
     private void Update() {
@@ -65,8 +62,8 @@ public class Miner : MonoBehaviour {
             boardReference.DeselectAst();
         }
         if (transform.position == new Vector3(0f, -1f, 0f)) {
+            boardReference.SendCargoToAtmos(miningSpeed * cargo);
             cargo -= miningSpeed * cargo;
-            //give cargo to the atmos
         }
     }
 }

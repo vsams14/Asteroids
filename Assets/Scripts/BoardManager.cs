@@ -11,9 +11,10 @@ public class BoardManager : MonoBehaviour {
     public Planet planetInstance;
     private Transform boardHolder;
     private GameObject ui;
-    private GameObject minerInstance;
+    private Miner minerInstance;
     private int level;
     private Asteroid selectedAst;
+    private Atmos atmosRef;
 
     public void SetupScene(int level) {
         this.level = level;
@@ -76,6 +77,8 @@ public class BoardManager : MonoBehaviour {
     private void PlaceAtmos() {
         GameObject instance = Instantiate(atmos, new Vector3(0f, -1.5f, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardHolder);
+        atmosRef = instance.GetComponent<Atmos>();
+        atmosRef.boardReference = this;
     }
 
     private void PlaceASpawn() {
@@ -87,14 +90,38 @@ public class BoardManager : MonoBehaviour {
     private void PlaceMiner() {
         GameObject instance = Instantiate(miner, new Vector3(0f, -1f, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardHolder);
-        minerInstance = instance;
-        minerInstance.GetComponent<Miner>().boardReference = this;
+        minerInstance = instance.GetComponent<Miner>();
+        minerInstance.boardReference = this;
     }
 
     private void Update() {
         if (level == 1) {
-
+            if (selectedAst != null || minerInstance.isSelected) {
+                ui.SetActive(true);
+                ui.transform.Find("Sidebar").Find("MINER").gameObject.SetActive(false);
+                ui.transform.Find("Sidebar").Find("ASTEROID").gameObject.SetActive(false);
+                if (selectedAst != null) {
+                    ShowAstData();
+                }
+                if (minerInstance.isSelected) {
+                    ShowMinerData();
+                }
+            } else {
+                ui.SetActive(false);
+            }
         }
+    }
+
+    private void ShowAstData() {
+        ui.transform.Find("Sidebar").Find("ASTEROID").gameObject.SetActive(true);
+        ui.transform.Find("Sidebar").Find("ASTEROID").Find("MINED").gameObject.GetComponent<Text>().text = "MINED " + (int)(((selectedAst.initial - selectedAst.abundance) / selectedAst.initial) * 100f) + "%";
+    }
+
+    private void ShowMinerData() {
+        ui.transform.Find("Sidebar").Find("MINER").gameObject.SetActive(true);
+        ui.transform.Find("Sidebar").Find("MINER").Find("SPEED").gameObject.GetComponent<Text>().text = "SPEED: " + minerInstance.miningSpeed;
+        ui.transform.Find("Sidebar").Find("MINER").Find("CARGO").gameObject.GetComponent<Text>().text = "CARGO: " + (int)minerInstance.cargo;
+        ui.transform.Find("Sidebar").Find("MINER").Find("MAXCARGO").gameObject.GetComponent<Text>().text = "MAX: " + minerInstance.maxCargo;
     }
 
     public void DestroyBoard() {
@@ -126,13 +153,18 @@ public class BoardManager : MonoBehaviour {
 
     public void SetSelectedAst(Asteroid ast) {
         selectedAst = ast;
-        minerInstance.GetComponent<Miner>().SetAst(ast);
+        minerInstance.SetAst(ast);
     }
 
     public void DeselectAst() {
         if (selectedAst != null) {
             selectedAst.Deselect();
             selectedAst = null;
+            minerInstance.SetAst(null);
         }
+    }
+
+    public void SendCargoToAtmos(float cargo) {
+        atmosRef.AddCargo(cargo);
     }
 }

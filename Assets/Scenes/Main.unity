@@ -157,7 +157,13 @@ Prefab:
         type: 2}
       propertyPath: gameUI
       value: 
-      objectReference: {fileID: 1385928434235138, guid: c1b2376e14ffce84eb4c458c9cba8847,
+      objectReference: {fileID: 1530344451590612, guid: c1b2376e14ffce84eb4c458c9cba8847,
+        type: 2}
+    - target: {fileID: 114719845209006412, guid: 567bba88ca2be9143abdda46dcf3b864,
+        type: 2}
+      propertyPath: atmos
+      value: 
+      objectReference: {fileID: 1659777132946686, guid: b6736187e41f6c44ca7efc8b9f14fe62,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 567bba88ca2be9143abdda46dcf3b864, type: 2}

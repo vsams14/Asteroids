@@ -6,12 +6,14 @@ public class Asteroid : MonoBehaviour {
 
     [HideInInspector]
     public BoardManager boardReference;
-    public float abundance;
+    public float abundance, initial;
+    private bool isSelected;
 
     // Use this for initialization
     void Start() {
         transform.Find("reticule").gameObject.SetActive(false);
         abundance = Random.Range(0f, 100f);
+        initial = abundance;
     }
 
     // Update is called once per frame
@@ -29,8 +31,9 @@ public class Asteroid : MonoBehaviour {
                 GO.transform.Find("reticule").gameObject.SetActive(false);
             }
         }
-        transform.Find("reticule").gameObject.SetActive(true);
-        boardReference.SetSelectedAst(this);
+        isSelected = !isSelected;
+        transform.Find("reticule").gameObject.SetActive(isSelected);
+        boardReference.SetSelectedAst(isSelected ? this : null);
     }
 
     public void Deselect() {
