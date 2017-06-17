@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
+  isMining: 0
+  miningSpeed: 0.01
+  cargo: 0
 --- !u!212 &212106164888098402
 SpriteRenderer:
   m_ObjectHideFlags: 1
