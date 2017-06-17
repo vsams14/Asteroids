@@ -26,47 +26,52 @@ public class GameManager : MonoBehaviour
         boardScript.SetupScene(instance.level);
     }
 
-    public void nextGen()
+    public void NextGen()
     {
         instance.boardScript.planetInstance.Next();
     }
 
-    public void prevGen()
+    public void PrevGen()
     {
         instance.boardScript.planetInstance.Prev();
     }
 
-    public void updateSidebar()
+    public void UpdateSidebar()
     {
-        instance.boardScript.updateSidebar();
+        instance.boardScript.UpdateSidebar();
     }
 
-    public void clickControls()
+    public void ClickControls()
     {
         instance.boardScript.ShowControls();
         instance.boardScript.HideAudio();
         instance.boardScript.HideVideo();
     }
 
-    public void clickAudio()
+    public void ClickAudio()
     {
         instance.boardScript.HideControls();
         instance.boardScript.ShowAudio();
         instance.boardScript.HideVideo();
     }
 
-    public void clickVideo()
+    public void ClickVideo()
     {
         instance.boardScript.HideControls();
         instance.boardScript.HideAudio();
         instance.boardScript.ShowVideo();
     }
 
-
+    public void ClickPlay()
+    {
+        instance.boardScript.DestroyBoard();
+        instance.boardScript.SetupScene(1);
+    }
+    
     public void quit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
     void OnApplicationQuit()
     {

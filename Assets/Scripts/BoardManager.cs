@@ -6,16 +6,18 @@ using System;
 public class BoardManager : MonoBehaviour
 {
 
-    public GameObject BG;
+    public GameObject bg, selectCanvas, gameGround, atmos, asteroidSpawner, miner;
     public Planet planet;
-    public GameObject selectCanvas;
     [HideInInspector]
     public Planet planetInstance;
     private Transform boardHolder;
-    private GameObject UI;
+    private GameObject ui;
+    private GameObject minerInstance;
+    private int level;
 
     public void SetupScene(int level)
     {
+        this.level = level;
         boardHolder = new GameObject("Board").transform;
         switch (level)
         {
@@ -24,6 +26,14 @@ public class BoardManager : MonoBehaviour
                     PlaceBackground();
                     PlaceCanvas();
                     PlacePlanet();                    
+                    break;
+                }
+            case 1:
+                {
+                    PlaceGameGround();
+                    PlaceAtmos();
+                    PlaceMiner();
+                    PlaceASpawn();
                     break;
                 }
             default:
@@ -35,7 +45,13 @@ public class BoardManager : MonoBehaviour
 
     private void PlaceBackground()
     {
-        GameObject instance = Instantiate(BG, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
+        GameObject instance = Instantiate(bg, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
+        instance.transform.SetParent(boardHolder);
+    }
+
+    private void PlaceGameGround()
+    {
+        GameObject instance = Instantiate(gameGround, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardHolder);
     }
 
@@ -45,47 +61,84 @@ public class BoardManager : MonoBehaviour
         instance.transform.SetParent(boardHolder);
         instance.Generate();
         planetInstance = instance;
-        updateSidebar();
+        UpdateSidebar();
     }
 
     private void PlaceCanvas()
     {
         GameObject instance = Instantiate(selectCanvas, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardHolder);
-        UI = instance;
+        ui = instance;
         ShowControls();
         HideAudio();
         HideVideo();
     }
 
-    public void updateSidebar()
+    private void PlaceAtmos()
     {
-        UI.transform.Find("Sidebar").Find("PLANETNAME").GetComponent<Text>().text = planetInstance.getName();
+        GameObject instance = Instantiate(atmos, new Vector3(0f, -1.5f, 0f), Quaternion.identity) as GameObject;
+        instance.transform.SetParent(boardHolder);
+    }
+
+    private void PlaceASpawn()
+    {
+        GameObject instance = Instantiate(asteroidSpawner, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
+        instance.transform.SetParent(boardHolder);
+        instance.GetComponent<AsteroidSpawner>().minerReference = minerInstance;
+    }
+
+    private void PlaceMiner()
+    {
+        GameObject instance = Instantiate(miner, new Vector3(0f, -1f, 0f), Quaternion.identity) as GameObject;
+        instance.transform.SetParent(boardHolder);
+        minerInstance = instance;
+    }
+
+    private void Update()
+    {
+        if (level == 1 && minerInstance.GetComponent<Miner>().isSelected)
+        {
+
+        }
+    }
+
+    public void DestroyBoard()
+    {
+        Destroy(boardHolder.gameObject);
+    }
+
+    public void UpdateSidebar()
+    {
+        ui.transform.Find("Sidebar").Find("PLANETNAME").GetComponent<Text>().text = planetInstance.getName();
     }
 
     public void ShowControls()
     {
-        UI.transform.Find("Options_Menu").Find("CONTROLS_UI").gameObject.SetActive(true);
+        ui.transform.Find("Options_Menu").Find("CONTROLS_UI").gameObject.SetActive(true);
     }
     public void ShowAudio()
     {
-        UI.transform.Find("Options_Menu").Find("AUDIO_UI").gameObject.SetActive(true);
+        ui.transform.Find("Options_Menu").Find("AUDIO_UI").gameObject.SetActive(true);
     }
     public void ShowVideo()
     {
-        UI.transform.Find("Options_Menu").Find("VIDEO_UI").gameObject.SetActive(true);
+        ui.transform.Find("Options_Menu").Find("VIDEO_UI").gameObject.SetActive(true);
     }
     public void HideControls()
     {
-        UI.transform.Find("Options_Menu").Find("CONTROLS_UI").gameObject.SetActive(false);
+        ui.transform.Find("Options_Menu").Find("CONTROLS_UI").gameObject.SetActive(false);
     }
     public void HideAudio()
     {
-        UI.transform.Find("Options_Menu").Find("AUDIO_UI").gameObject.SetActive(false);
+        ui.transform.Find("Options_Menu").Find("AUDIO_UI").gameObject.SetActive(false);
     }
     public void HideVideo()
     {
-        UI.transform.Find("Options_Menu").Find("VIDEO_UI").gameObject.SetActive(false);
+        ui.transform.Find("Options_Menu").Find("VIDEO_UI").gameObject.SetActive(false);
+    }
+    public GameObject GetMiner()
+    {
+        return minerInstance;
     }
 
 }
